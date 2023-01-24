@@ -94,4 +94,291 @@ h1 {
 code {
     color: #39ea80;
     font: inherit;
+    html, body
+
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #421b40;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.world {
+    margin: auto;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.s1 {
+    border-color: #e53584;
+    animation: flyA 5s linear infinite;
+}
+
+.s2 {
+    border-color: #000;
+    animation: flyB 10s linear infinite;
+}
+
+.s3 {
+    border-color: #febf00;
+    animation: flyC 15s linear infinite;
+}
+
+.s4 {
+    border-color: #fff;
+    animation: flyD 5s linear infinite;
+}
+
+.square:before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #306076;
+    content: " ";
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+.s1:before {
+    top: 440%;
+    left: 500%;
+    border-color: #8a2216;
+}
+
+.s2:before {
+    top: 440%;
+    left: 0%;
+    border-color: #2fd1c4;
+}
+
+.s3:before {
+    top: -100%;
+    left: -200%;
+    border-color: #fff;
+}
+
+.s4:before {
+    bottom: 100%;
+    right: 600%;
+    border-color: #febf00;
+}
+
+@keyframes flyA {
+    from {
+        top: 30%;
+        left: 0%;
+        transform: scale(4, 4);
+    }
+
+    to {
+        top: 85%;
+        left: 100%;
+        transform: scale(1, 1) rotate(240deg);
+    }
+}
+
+@keyframes flyB {
+    from {
+        top: 100%;
+        left: 90%;
+        transform: scale(1, 1);
+    }
+
+    to {
+        top: 15%;
+        left: 10%;
+        transform: scale(2, 2) rotate(-240deg);
+    }
+}
+
+@keyframes flyC {
+    from {
+        top: 0%;
+        right: 10%;
+    }
+
+    to {
+        top: 100%;
+        right: 10%;
+        transform: rotate(240deg);
+    }
+}
+
+@keyframes flyD {
+    0% {
+        bottom: 0%;
+        right: 80%;
+    }
+
+    50% {
+        bottom: 40%;
+        right: 60%;
+    }
+
+    100% {
+        bottom: 100%;
+        right: 100%;
+        transform: rotate(240deg);
+    }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #421b40;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.world {
+    margin: auto;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.s1 {
+    border-color: #e53584;
+    animation: flyA 5s linear infinite;
+}
+
+.s2 {
+    border-color: #000;
+    animation: flyB 10s linear infinite;
+}
+
+.s3 {
+    border-color: #febf00;
+    animation: flyC 15s linear infinite;
+}
+
+.s4 {
+    border-color: #fff;
+    animation: flyD 5s linear infinite;
+}
+
+.square:before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #306076;
+    content: " ";
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+.s1:before {
+    top: 440%;
+    left: 500%;
+    border-color: #8a2216;
+}
+
+.s2:before {
+    top: 440%;
+    left: 0%;
+    border-color: #2fd1c4;
+}
+
+.s3:before {
+    top: -100%;
+    left: -200%;
+    border-color: #fff;
+}
+
+.s4:before {
+    bottom: 100%;
+    right: 600%;
+    border-color: #febf00;
+}
+
+@keyframes flyA {
+    from {
+        top: 30%;
+        left: 0%;
+        transform: scale(4, 4);
+    }
+
+    to {
+        top: 85%;
+        left: 100%;
+        transform: scale(1, 1) rotate(240deg);
+    }
+}
+
+@keyframes flyB {
+    from {
+        top: 100%;
+        left: 90%;
+        transform: scale(1, 1);
+    }
+
+    to {
+        top: 15%;
+        left: 10%;
+        transform: scale(2, 2) rotate(-240deg);
+    }
+}
+
+@keyframes flyC {
+    from {
+        top: 0%;
+        right: 10%;
+    }
+
+    to {
+        top: 100%;
+        right: 10%;
+        transform: rotate(240deg);
+    }
+}
+
+@keyframes flyD {
+    0% {
+        bottom: 0%;
+        right: 80%;
+    }
+
+    50% {
+        bottom: 40%;
+        right: 60%;
+    }
+
+    100% {
+        bottom: 100%;
+        right: 100%;
+        transform: rotate(240deg);
+    }
 }
