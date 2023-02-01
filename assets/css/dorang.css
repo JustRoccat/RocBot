@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway&display=swap');
 
 *::after, *::before {
     box-sizing: border-box;
@@ -1152,7 +1152,7 @@ hr {
 }
 
 .blockquote-footer::before {
-    content: "— ";
+    content: "ï¿½ï¿½";
 }
 
 hr {
