@@ -1,0 +1,384 @@
+
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+.close:hover,
+.close:focus {
+    box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {
+    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+    }
+}
+
+
+$colors: ( fill: #a972cb, pulse: #ef6eae, close: #ff7f82, raise: #ffa260, up: #e4cb58, slide: #8fc866, offset: #19bc8b );
+
+
+@each $button, $color in $colors {
+    .#{$button} {
+        --color: #{$color};
+        --hover: #{adjust-hue($color, 45deg)};
+    }
+}
+
+button {
+    color: var(#c139ea);
+    transition: 0.25s;
+    &:hover, &:focus {
+        border-color: var(--hover);
+        color: #fff;
+    }
+}
+
+body {
+    color: #fff;
+    background: hsl(227, 10%, 10%);
+    font: 300 1em 'Fira Sans', sans-serif;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+code {
+    color: #39ea80;
+    font: inherit;
+    html, body
+
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #421b40;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.world {
+    margin: auto;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.s1 {
+    border-color: #e53584;
+    animation: flyA 5s linear infinite;
+}
+
+.s2 {
+    border-color: #000;
+    animation: flyB 10s linear infinite;
+}
+
+.s3 {
+    border-color: #febf00;
+    animation: flyC 15s linear infinite;
+}
+
+.s4 {
+    border-color: #fff;
+    animation: flyD 5s linear infinite;
+}
+
+.square:before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #306076;
+    content: " ";
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+.s1:before {
+    top: 440%;
+    left: 500%;
+    border-color: #8a2216;
+}
+
+.s2:before {
+    top: 440%;
+    left: 0%;
+    border-color: #2fd1c4;
+}
+
+.s3:before {
+    top: -100%;
+    left: -200%;
+    border-color: #fff;
+}
+
+.s4:before {
+    bottom: 100%;
+    right: 600%;
+    border-color: #febf00;
+}
+
+@keyframes flyA {
+    from {
+        top: 30%;
+        left: 0%;
+        transform: scale(4, 4);
+    }
+
+    to {
+        top: 85%;
+        left: 100%;
+        transform: scale(1, 1) rotate(240deg);
+    }
+}
+
+@keyframes flyB {
+    from {
+        top: 100%;
+        left: 90%;
+        transform: scale(1, 1);
+    }
+
+    to {
+        top: 15%;
+        left: 10%;
+        transform: scale(2, 2) rotate(-240deg);
+    }
+}
+
+@keyframes flyC {
+    from {
+        top: 0%;
+        right: 10%;
+    }
+
+    to {
+        top: 100%;
+        right: 10%;
+        transform: rotate(240deg);
+    }
+}
+
+@keyframes flyD {
+    0% {
+        bottom: 0%;
+        right: 80%;
+    }
+
+    50% {
+        bottom: 40%;
+        right: 60%;
+    }
+
+    100% {
+        bottom: 100%;
+        right: 100%;
+        transform: rotate(240deg);
+    }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #421b40;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.world {
+    margin: auto;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.s1 {
+    border-color: #e53584;
+    animation: flyA 5s linear infinite;
+}
+
+.s2 {
+    border-color: #000;
+    animation: flyB 10s linear infinite;
+}
+
+.s3 {
+    border-color: #febf00;
+    animation: flyC 15s linear infinite;
+}
+
+.s4 {
+    border-color: #fff;
+    animation: flyD 5s linear infinite;
+}
+
+.square:before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #306076;
+    content: " ";
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+.s1:before {
+    top: 440%;
+    left: 500%;
+    border-color: #8a2216;
+}
+
+.s2:before {
+    top: 440%;
+    left: 0%;
+    border-color: #2fd1c4;
+}
+
+.s3:before {
+    top: -100%;
+    left: -200%;
+    border-color: #fff;
+}
+
+.s4:before {
+    bottom: 100%;
+    right: 600%;
+    border-color: #febf00;
+}
+
+@keyframes flyA {
+    from {
+        top: 30%;
+        left: 0%;
+        transform: scale(4, 4);
+    }
+
+    to {
+        top: 85%;
+        left: 100%;
+        transform: scale(1, 1) rotate(240deg);
+    }
+}
+
+@keyframes flyB {
+    from {
+        top: 100%;
+        left: 90%;
+        transform: scale(1, 1);
+    }
+
+    to {
+        top: 15%;
+        left: 10%;
+        transform: scale(2, 2) rotate(-240deg);
+    }
+}
+
+@keyframes flyC {
+    from {
+        top: 0%;
+        right: 10%;
+    }
+
+    to {
+        top: 100%;
+        right: 10%;
+        transform: rotate(240deg);
+    }
+}
+
+@keyframes flyD {
+    0% {
+        bottom: 0%;
+        right: 80%;
+    }
+
+    50% {
+        bottom: 40%;
+        right: 60%;
+    }
+
+    100% {
+        bottom: 100%;
+        right: 100%;
+        transform: rotate(240deg);
+    }
+}
