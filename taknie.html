@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .buttons {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="image.jpg" alt="Image">
+    <div class="buttons">
+      <button id="yes-btn">Tak</button>
+      <button id="no-btn">Nie</button>
+    </div>
+
+    <script>
+      const yesBtn = document.querySelector("#yes-btn");
+      const noBtn = document.querySelector("#no-btn");
+
+      yesBtn.addEventListener("click", function() {
+        window.location.href = "./taknie2.html";
+      });
+
+      noBtn.addEventListener("mouseenter", function() {
+        const x = Math.floor(Math.random() * 120) - 60;
+        const y = Math.floor(Math.random() * 120) - 60;
+        noBtn.style.transform = `translate(${x}%, ${y}%)`;
+      });
+    </script>
+  </body>
+</html>
