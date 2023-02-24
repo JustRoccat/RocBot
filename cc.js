@@ -1,130 +1,66 @@
-class App {
-    static messages = [];
+$(document).ready(function(){
+
+
+  var playlist = [{
+      title:"Controlla",
+      artist:"idealism",
+      mp3:"assets/audio/Controlla (320 kbps).mp3",
+      poster: "https://i.imgur.com/sCbrzQa.png"
+    }];
   
-    static sendMessage() {
-      let message = document.getElementById("newMessage").value;
-      let from = document.getElementById("from").value;
-      localStorage.setItem("from", from);
+  var cssSelector = {
+    jPlayer: "#jquery_jplayer",
+    cssSelectorAncestor: ".music-player"
+  };
   
-      App.messages.push(new Message(message, from));
-      document.getElementById("newMessage").value = "";
-  
-      localStorage.setItem("messages", JSON.stringify(App.messages));
-      App.refreshChat();
-    }
-  
-    static refreshChat() {
-      let div = document.getElementById("chat-content");
-  
-      for (
-        let index = div.childNodes.length - 1;
-        index < App.messages.length;
-        index++
-      ) {
-        const element = App.messages[index];
-        let msg = document.createElement("span");
-  
-        msg.id = "msg-" + index;
-        msg.classList.add("msg");
-        msg.innerHTML = "<div class='head'> " + element.from + " </div>";
-        msg.innerHTML += "<p class='body'> " + element.message + " </p>";
-        msg.innerHTML += "<div class='footer'> " + element.timeStr + " </div>";
-        div.appendChild(msg);
-      }
-    }
-  }
-  
-  class Message {
-    constructor(msg, from) {
-      this.message = msg;
-      this.time = new Date(Date.now());
-      this.timeStr = this.time.toLocaleTimeString();
-      this.from = from;
-    }
-  }
-  
-  let activated = false;
-  let emojiBtn = document.getElementById("emoji");
-  
-  let emojiList = [
-    "👍",
-    "👌",
-    "👏",
-    "🙏",
-    "🆗",
-    "🙂",
-    "😀",
-    "😃",
-    "😉",
-    "😊",
-    "😋",
-    "😌",
-    "😏",
-    "😐",
-    "😑",
-    "😒",
-    "😓",
-    "😂",
-    "🤣",
-    "😅",
-    "😆",
-    "😜",
-    "😹",
-    "🚶",
-    "👫",
-    "👬",
-    "👭",
-    "😙",
-    "😘",
-    "🏠",
-    "👆",
-    "🖕",
-    "👋",
-    "👎",
-    "👈",
-    "👉"
-  ];
-  emojiList.forEach(element => {
-    let list = document.getElementById("emoji-list");
-    let node = document.createElement("span");
-    node.classList.add("emoji");
-    node.textContent = element;
-    node.onclick = ev => {
-      document.getElementById("newMessage").value += node.textContent;
-    };
-    list.appendChild(node);
-  });
-  
-  emojiBtn.onclick = function(evt) {
-    activated = !activated;
-  
-    let list = document.getElementById("emoji-list");
-    if (activated) {
-      list.style.display = "flex";
-    } else {
-      list.style.display = "none";
+  var options = {
+    swfPath: "https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/jquery.jplayer/Jplayer.swf",
+    supplied: "ogv, m4v, oga, mp3",
+    volumechange: function(event) {
+      $( ".volume-level" ).slider("value", event.jPlayer.options.volume);
+    },
+    timeupdate: function(event) {
+      $( ".progress" ).slider("value", event.jPlayer.status.currentPercentAbsolute);
     }
   };
   
-  document.getElementById("from").value =
-    localStorage.getItem("from") !== undefined
-      ? localStorage.getItem("from")
-      : "";
-  App.messages =
-    JSON.parse(localStorage.getItem("messages")) !== null
-      ? JSON.parse(localStorage.getItem("messages"))
-      : new Array();
+  var myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
+  var PlayerData = $(cssSelector.jPlayer).data("jPlayer");
   
-  let div = document.getElementById("chat-content");
-  for (let index = 0; index < App.messages.length; index++) {
-    const element = App.messages[index];
-    let msg = document.createElement("span");
   
-    msg.id = "msg-" + index;
-    msg.classList.add("msg");
-    msg.innerHTML = "<div class='head'> " + element.from + " </div>";
-    msg.innerHTML += "<p class='body'> " + element.message + " </p>";
-    msg.innerHTML += "<div class='footer'> " + element.timeStr + " </div>";
-    div.appendChild(msg);
-  }
+  // Create the volume slider control
+  $( ".volume-level" ).slider({
+     animate: "fast",
+		max: 1,
+		range: "min",
+		step: 0.01,
+		value : $.jPlayer.prototype.options.volume,
+		slide: function(event, ui) {
+			$(cssSelector.jPlayer).jPlayer("option", "muted", false);
+			$(cssSelector.jPlayer).jPlayer("option", "volume", ui.value);
+		}
+  });
   
+  // Create the progress slider control
+  $( ".progress" ).slider({
+		animate: "fast",
+		max: 100,
+		range: "min",
+		step: 0.1,
+		value : 0,
+		slide: function(event, ui) {
+			var sp = PlayerData.status.seekPercent;
+			if(sp > 0) {
+				// Move the play-head to the value and factor in the seek percent.
+				$(cssSelector.jPlayer).jPlayer("playHead", ui.value * (100 / sp));
+			} else {
+				// Create a timeout to reset this slider to zero.
+				setTimeout(function() {
+					 $( ".progress" ).slider("value", 0);
+				}, 0);
+			}
+		}
+	});
+
+  
+});

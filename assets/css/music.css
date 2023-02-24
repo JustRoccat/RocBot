@@ -1,0 +1,104 @@
+/* główny kontener odtwarzacza */
+.player-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 80px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* kontener informacji o piosence */
+.song-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* tytuł piosenki */
+.song-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* artysta */
+.song-info p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* kontener przycisków odtwarzacza */
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+/* przycisk odtwarzania/pauzy */
+.play-pause-button {
+  width: 48px;
+  height: 48px;
+  background-color: #e60073;
+  border-radius: 50%;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.play-pause-button:hover {
+  background-color: #d10065;
+}
+
+/* ikona odtwarzania/pauzy */
+.play-pause-button i {
+  color: white;
+  font-size: 24px;
+}
+
+/* pasek postępu */
+.progress-bar {
+  height: 4px;
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+  margin-left: 16px;
+}
+
+/* wypełnienie paska postępu */
+.progress-bar-fill {
+  height: 100%;
+  background-color: #e60073;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+/* przycisk zmiany głośności */
+.volume-button {
+  width: 32px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.volume-button:hover {
+  background-color: #b3b3b3;
+}
+
+/* ikona zmiany głośności */
+.volume-button i {
+  color: white;
+  font-size: 16px;
+}
