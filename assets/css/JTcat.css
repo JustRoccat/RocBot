@@ -1,6 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway&display=swap');
 
+@media (max-width: 768px) {
+    /* styl dla ekranów o szerokości mniejszej niż 768 pikseli */
+  }
+  
+  @media (min-width: 769px) {
+    /* styl dla ekranów o szerokości większej niż 768 pikseli */
+  }
+
+  @media (min-width: 768px) {
+    iframe {
+      max-width: 640px;
+      min-height: 360px;
+      max-height: 480px;
+    }
+  }
+  
+  
+
 *::after, *::before {
     box-sizing: border-box;
 }
@@ -33,6 +51,8 @@
         width: 100%;
         height: 100%;
     }
+
+    
 
 
 abbr[title] {
