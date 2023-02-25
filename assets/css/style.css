@@ -29,7 +29,7 @@ a{
 a:after{
     content: "";
     position: absolute;
-    background-color: #975fff;
+    background-color: #8c53f5;
     height: 3px;
     width: 0;
     left: 0;
