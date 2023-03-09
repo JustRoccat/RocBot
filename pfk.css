@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+body {
+    background: linear-gradient(to bottom right, #006633, #008040);
+    animation: background-color 10s infinite alternate;
+  }
+  
+  @keyframes background-color {
+    0% {
+      background-color: #006633;
+    }
+    50% {
+      background-color: #008040;
+    }
+    100% {
+      background-color: #006633;
+    }
+  }
+  
+  
+
+.header h2 {
+    font-size: 4em; /* zmniejsz lub zwiększ wartość em, aby zmienić rozmiar */
+    text-align: center; /* wyśrodkuj tekst w horyzontalnym kierunku */
+    margin: 0 auto; /* wyśrodkuj element w pionowym kierunku */
+    max-width: 50%; /* opcjonalnie, ustaw maksymalną szerokość */
+    background: #006633;
+    position: relative;
+    z-index: 1;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: 2px 2px #000000; /* cień tekstu */
+    color: black; /* zmiana koloru tekstu na czarny */
+  }
+  
+  .header h2:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    filter: blur(40px);
+  }
+
+
+
+  .video-container {
+    text-align: center;
+    position: relative;
+    top: -10%;
+  }
+  
+  .video-container iframe {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  
+
+  .malo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  
+  .malo iframe {
+    transition: transform 0.2s ease-in-out;
+    margin: 0 10px; /* Dodaj margines między elementami */
+    max-width: 100%; /* Ogranicz szerokość elementów do szerokości sekcji */
+  }
+  
+  .malo iframe:hover {
+    transform: scale(1.1);
+  }
+  
+
+  .ae {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* ustawienie elementów w poziomie */
+  }
+  
+  a {
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-right: 20px; /* odstęp między elementami */
+    position: relative;
+    z-index: 1;
+    color: black;
+  }
+  
+  a:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    filter: blur(40px);
+  }
+
+  .madeby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #006633;
+    color: #000000;
+    height: 10px;
+    padding: 30px;
+  }
+  
+  .madeby a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  
