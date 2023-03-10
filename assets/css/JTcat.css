@@ -17,18 +17,6 @@
     }
   }
   
-  .Pod {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 575.98px) {
-    .Pod {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
   
 
