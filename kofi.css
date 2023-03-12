@@ -5,29 +5,29 @@
   font-weight: bold;
   text-decoration: none;
   vertical-align: middle;
-  }
-  
-  .kofi-icon {
+}
+
+.kofi-icon {
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
   transform: translateY(0);
-  transition: transform 0.3s;
-  }
-  
-  .kofi-icon img {
+  transition: transform 0.2s ease-out;
+}
+
+.kofi-icon img {
   width: 44px;
   height: 28px;
   vertical-align: middle;
-  transition: all 0.3s;
-  }
-  
-  /* Styl dla efektu hover */
-  .kofi-icon:hover {
+  transition: all 0.2s ease-out;
+}
+
+/* Styl dla efektu hover */
+.kofi-icon:hover {
   transform: translateY(-5px);
-  }
-  
-  .kofi-icon:hover img {
+}
+
+.kofi-icon:hover img {
   transform: scale(1.2);
-  transition: none;
-  }
+  transition: transform 0.2s ease;
+}
