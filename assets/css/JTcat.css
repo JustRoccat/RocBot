@@ -1329,7 +1329,7 @@ a {
 
 @media screen and (max-width: 767px) {
     [class~=page-navbar] [class~=nav-navbar] [class~=nav-link] {
-      margin-top: -40px;
+      margin-top: -18px;
     }
   }
   
