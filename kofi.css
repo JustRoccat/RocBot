@@ -38,17 +38,14 @@
 
 .social-icons {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20px;
+  right: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 10px;
+  margin-left: 10px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -61,6 +58,8 @@
   font-size: 20px;
   color: #fff;
 }
+
+
 
 .icon-instagram {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png);
