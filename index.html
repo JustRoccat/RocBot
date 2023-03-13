@@ -14,6 +14,18 @@
     <link rel="stylesheet" type="text/css" href="kofi.css" />
     <link rel="stylesheet" type="text/css" href="Animation sections.css" />
 
+    <script>
+        let timeout;
+window.addEventListener('scroll', () => {
+  clearTimeout(timeout);
+  document.body.classList.remove('scrollbar-hidden');
+  timeout = setTimeout(() => {
+    document.body.classList.add('scrollbar-hidden');
+  }, 6000);
+});
+
+    </script>
+
 
 </head>
 <body data-spy="scrol" data-target=".nav" data-offset="40" id="home" class="dark-theme">
