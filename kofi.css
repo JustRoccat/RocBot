@@ -38,14 +38,17 @@
 
 .social-icons {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons a {
   display: inline-block;
-  margin-left: 10px;
+  margin: 0 10px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -58,8 +61,6 @@
   font-size: 20px;
   color: #fff;
 }
-
-
 
 .icon-instagram {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png);
@@ -93,6 +94,7 @@
   }
 }
 
+
 :root {
   --main-color: #740297;
 }
@@ -100,9 +102,7 @@
 iframe {
   border: 5px solid var(--main-color);
   border-radius: 10px;
-  margin: 20px;
-  background: linear-gradient(to right, #740297 0%, #9c03a8 20%, #c303a4 40%, #ed06b2 60%, #c303a4 80%, #9c03a8 100%);
-  animation: changeColor 5s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 @keyframes changeColor {
