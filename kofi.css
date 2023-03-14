@@ -181,10 +181,10 @@ body {
   font-weight: bold;
 }
 
-
-
-
-
+.discord-profile {
+  max-width: 500px; /* zmień wartość na żądaną */
+  margin: 0 auto;
+}
 
 
 
