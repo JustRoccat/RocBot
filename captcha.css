@@ -1,0 +1,35 @@
+body {
+  background-color: #343a40;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+form {
+  margin: 50px auto;
+  width: 300px;
+  text-align: center;
+}
+
+button {
+  background-color: #ffffff;
+  color: #343a40;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
