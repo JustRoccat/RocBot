@@ -1,0 +1,145 @@
+/* resetowanie stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* style dla całej strony */
+body {
+  font-family: sans-serif;
+  background-color: #1f1f1f;
+  color: #d8d8d8;
+  line-height: 1.5;
+}
+
+/* style dla nagłówka */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #363636;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d8d8d8;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 2rem;
+}
+
+header nav ul li a {
+  color: #d8d8d8;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #a7a7a7;
+}
+
+/* style dla sekcji o mnie */
+#o-mnie {
+  padding: 4rem;
+  background-color: #1f1f1f;
+}
+
+#o-mnie h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #d8d8d8;
+}
+
+#o-mnie p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* style dla sekcji projektów */
+#projekty {
+  padding: 4rem;
+  background-color: #292929;
+}
+
+#projekty h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #d8d8d8;
+}
+
+#projekty ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#projekty li {
+  width: 30%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #363636;
+  transition: all 0.2s ease-in-out;
+}
+
+#projekty li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#projekty li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d8d8d8;
+}
+
+#projekty li p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+#projekty li a {
+  color: #8a2be2;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#projekty li a:hover {
+  color: #6b1d9e;
+}
+
+/* style dla stopki */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: #363636;
+  color: #d8d8d8;
+  font-size: 1.2rem
+}
+
+#projekty li img {
+  width: 100%;
+  height: 200px;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+}
+
+
+#o-mnie {
+  border: 2px solid #ad97e0; /* kolor ramki */
+  padding: 15px; /* odstęp od tekstu do ramki */
+  border-radius: 10px; /* zaokrąglenie rogów ramki */
+  color: #fff; /* kolor tekstu */
+}
