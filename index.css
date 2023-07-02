@@ -9,6 +9,116 @@
 	background-color: #333;
 	font-family: 'Railway', sans-serif;
 	}
+
+  ::-webkit-scrollbar {
+    width: 8px; /* szerokość paska przewijania */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #343a40; /* kolor tła paska przewijania */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #740297; /* kolor punktu, w którym znajduje się użytkownik */
+    border-radius: 10px; /* zaokrąglenie punktu */
+    border: none;
+  }
+
+  /* Pasek przewijania */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #343a40;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #740297;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Prefiksy dla innych przeglądarek */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #740297 #343a40;
+}
+
+/* Edge i IE */
+*::-ms-scrollbar {
+  width: 8px;
+}
+
+*::-ms-scrollbar-track {
+  background: #343a40;
+}
+
+*::-ms-scrollbar-thumb {
+  background: #740297;
+  border-radius: 10px;
+  border: none;
+}
+
+
+  .hamburger-menu {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+  }
+  
+  .hamburger-menu label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu i {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+  }
+  
+  
+  .menu {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background-color: #a443ff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked + label + .menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
 	
 	.background-overlay {
 	background-size: cover;
@@ -25,6 +135,79 @@
 	filter: blur(10px);
 	opacity: 50%;
 	}
+
+  .skill {
+    width: 30%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    border: 2px solid #8b00ff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: scale(1.1);
+  }
+
+  
+
+  footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  footer a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #8b00ff;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer a:hover {
+    background-color: #8b00ff;
+    color: #ffffff;
+  }
+
+  
+
+  
+
+  footer {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #8b00ff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: transparent; /* Usunięcie tła */
+  }
+  
+
+  .skills-container {
+    /* ... */
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   
   /* Styl logo */
   .logo-container {
