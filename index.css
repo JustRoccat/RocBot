@@ -27,7 +27,7 @@
   /* Pasek przewijania */
 ::-webkit-scrollbar {
   width: 8px;
-}
+}s
 
 ::-webkit-scrollbar-track {
   background: #343a40;
