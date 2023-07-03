@@ -397,7 +397,46 @@ footer a {
 }
 
 
+.kofi-link {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align: middle;
+}
 
+.kofi-icon {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+
+.kofi-icon img {
+  width: 44px;
+  height: 28px;
+  vertical-align: middle;
+  transition: all 0.2s ease-out;
+}
+
+/* Styl dla efektu hover */
+.kofi-icon:hover {
+  transform: translateY(-5px);
+}
+
+.kofi-icon:hover img {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+.desginby {
+  margin-top: 10px;
+}
+
+.coffee-section {
+  margin-top: 10px;
+}
 
   
   
