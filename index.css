@@ -290,48 +290,65 @@
   
   
   
-  /* Styl przycisku przekierowującego */
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin: 50px auto;
-}
-
-.main-button {
-  display: inline-block;
-  padding: 10px 30px;
-  background-color: #8b00ff;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  border: none;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.main-button:hover {
-  background-color: #ffffff;
-  color: #8b00ff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  transform: scale(1.1);
-}
-
-.main-button:focus {
-  outline: none;
-  transform: translateY(2px);
-}
-
-@media (max-width: 767px) {
-  .main-button {
-    padding: 8px 24px;
-    font-size: 16px;
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
   }
-}
-
+  
+  .main-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #8b00ff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .main-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .main-button:hover:before {
+    width: 100%;
+  }
+  
+  .main-button:hover {
+    background-color: #ffffff;
+    color: #8b00ff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+  }
+  
+  .main-button:focus {
+    outline: none;
+    transform: translateY(2px);
+  }
+  
+  @media (max-width: 767px) {
+    .main-button {
+      padding: 8px 24px;
+      font-size: 16px;
+    }
+  }
+  
 
 
 .description-container {
