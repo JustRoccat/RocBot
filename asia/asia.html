@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Prezentacja o Azji</title>
+    <style>
+/* Stylizacja prezentacji */
+body {
+    
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+	background: linear-gradient(-45deg, #222222, #111111, #1f1f1f, #424242);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.slideshow-container {
+    width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    background: #111;
+    border: 2px solid #575757;
+}
+
+.slide {
+    display: none;
+    background: #111;
+    text-align: center;
+    padding: 30px;
+    transition: opacity 0.5s;
+    border-radius: 20px;
+    border: 2px solid #353535;
+}
+
+img {
+    width: 375px;
+    height: 375px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    color: #c9c9c9;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+p {
+    color: #c9c9c9;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+    .footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+@import "compass/css3";
+
+
+
+
+/* Dodatkowe style według potrzeb */
+
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <h2>Welcome</h2>
+            <p>Welcome to my presentation about Russia</p>
+        </div>
+
+        <div class="slide fade">
+            <h2>Culture</h2>
+            <p>Russia is a country with a rich and diverse culture that includes various art forms such as literature, music, theater, dance and visual arts. Russian literature is considered one of the most important cultural contributions to the world, and the literary canon is shaped by writers such as Leo Tolstoy, Fyodor Dostoyevsky and Anton Chekhov, among others. Russian composers such as Pyotr Ilyich Tchaikovsky, Sergei Rachmaninoff, and Igor Stravinsky also had a significant impact on the world of classical music.
+            </p>
+            <img src="krajobraz.jpg" alt="Azja 2">
+        </div>
+
+        <div class="slide fade">
+            <h2>History</h2>
+            <p>The history of Russia is full of turbulent events that had a huge impact on the country's society, politics and culture. The key moments are the October Revolution and World War II. The October Revolution led to the overthrow of tsarism and the establishment of a communist regime. World War II was a breakthrough moment for Russia, it brought enormous destruction and losses, but also contributed to strengthening the role of the Soviet Union in the international arena. These events are crucial to understanding Russia's history and its current influence on the world.</p>
+            <img src="krajobraz2.jpg" alt="Azja 3">
+        </div>
+
+        <div class="slide fade">
+            <h2>Industry</h2>
+            <p>The Russian Federation has significant industrial potential, much of which was built in Soviet times. After the collapse of the USSR, many of these industrial facilities underwent thorough modernization. The aim of the modernization process was to increase their efficiency and adapt to the changing economic landscape of the newly established Russian Federation. Industrial plants inherited from the Soviet Union continue to play a key role in the country's economy, contributing to its industrial efficiency and providing the basis for further development.</p>
+            <img src="industry.jpg" alt="Azja 4">
+        </div>
+
+        <div class="slide fade">
+            <h2>Characteristic</h2>
+            <p>Russia is one of the few countries in the world and one of three Asian countries (along with Turkey and Kazakhstan) whose territory is located on two continents.</p>
+            <img src="krajobraz.jpg" alt="Azja 4">
+        </div>
+
+        <div class="slide fade">
+            <h2>Vladimir Putin</h2>
+            <p>Vladimir Putin is a Russian politician who has played a key role in Russian politics for many years, he was born in Leningrad (now Saint Petersburg). Putin has held various important positions in the Russian government, including president and prime minister of Russia.</p>
+            <img src="putin.jpg" alt="Azja 4">
+        </div>
+        
+
+        
+        <div class="slide fade">
+            <h2>Thank you for watching</h2>
+            
+
+            <footer>
+                <a href="https://www.roccatbot.eu/">Made by Wojciech</a>
+            </footer>
+        </div>
+        <!-- Dodaj więcej slajdów z ciekawostkami o Azji -->
+    </div>
+
+    <script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+showSlide(slideIndex);
+
+document.body.onclick = function() {
+    nextSlide();
+};
+
+function showSlide(n) {
+    if (n >= slides.length) {
+        slideIndex = 0;
+    } else if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
+    </script>
+</body>
+</html>
