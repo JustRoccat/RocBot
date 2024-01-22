@@ -1,107 +1,242 @@
 <!DOCTYPE html>
-<html lang="pl">
-<!--
-Oh you cheeky little rascal,
-Trying to look at my code are you?
-You shouldn't have done that...
-
-                     BIDEN BLAST
-⡣⡃⢎⢜⢔⠱⡨⠂⠅⠌⡐⢐⢐⢱⢱⢱⠨⢂⢊⠔⡐⡡⢂⠢⠡⡂⡪⢐⢑⢌⠜⢄⠕⡐⠡⡂⠢⠡⢂⠢⡂⠪⡐⡐⢌⢢⢱⣻⢌⢂
-⠢⡪⡪⡪⡂⡇⡪⠈⠄⢕⠬⡐⠠⢣⢣⢣⡣⡑⠄⡑⢌⠢⡂⢅⠕⡐⢌⢢⠱⡡⢣⢑⠌⡔⠡⠊⠌⠌⡂⠢⠨⡈⡢⢑⢕⢜⢜⢞⡕⡠
-⢑⢌⠪⡢⡪⡊⡆⠡⢘⢌⣗⡥⡡⢣⢣⡳⣝⡎⢔⢸⢸⡱⡑⡐⡑⡌⢆⢣⠱⡘⢌⢆⢧⢡⢕⠣⢃⠕⠨⡈⡂⡂⡊⢔⠰⡑⡭⣇⢇⠢
-⠡⡂⢅⢣⢊⠆⠕⡈⡐⡕⣮⣻⢜⠸⡪⡺⡕⣏⢆⢪⢪⡺⡔⠌⠌⠔⡁⢆⠣⡱⣹⢹⡸⡘⡄⢕⢐⠨⢐⠐⡐⢐⠨⠠⡑⢜⢜⢮⣗⢕
-⠌⠔⡠⠑⠅⠅⡃⠄⠢⡣⣗⣟⡎⠌⢌⠢⡑⣗⡕⢜⠼⡽⣝⡎⠌⠌⡂⠢⡑⡸⣇⢧⡣⡣⢪⢐⠔⠨⢐⠐⡐⢐⠨⠐⢌⢪⢊⢞⢾⢕
-⠨⠂⢂⠡⠁⠅⠐⡈⠜⡸⡺⣪⣗⠅⠅⡅⢇⢗⣟⡜⡮⣟⣗⡧⡑⠨⠠⢑⠐⠨⣺⢵⢝⡼⡰⡑⢌⠌⡢⠨⡐⡐⠠⡡⡑⢌⠜⣌⢳⢽
-⠀⠅⠂⠄⡁⠄⡅⡀⠐⡐⡑⡕⡷⡅⡑⢌⢪⢪⣗⡯⡪⡓⣗⢝⡆⠅⠌⡐⠨⢐⠸⡽⣕⡗⡜⢌⠆⡕⣔⣕⣖⠸⢜⡖⣇⣧⢽⡜⣗⢟
-⠈⡈⡈⠄⠐⢌⢆⠂⢀⠂⠪⡸⣹⢵⠸⡨⢢⢣⢗⣟⡆⡕⣕⢧⡫⡌⡐⠨⡈⡐⡈⡯⣗⣗⢕⢳⣹⢮⠷⠵⠱⡁⡣⢍⠕⡨⠢⡑⡜⣝
-⠀⠄⡀⠂⡁⡪⣪⡃⠀⠌⢌⠜⢮⢯⢃⠊⠢⠱⡫⣗⣧⢣⢳⢕⢽⢸⢀⢃⢂⠢⠪⡮⣳⢕⡇⡇⡪⢂⠣⠑⢅⡣⠨⢪⣂⢂⠅⡂⣇⢗
-⠈⡀⠄⠂⡐⢜⣜⢎⠀⢅⠑⢌⡳⣝⢆⠈⡀⠅⡝⡮⣗⡇⡳⡙⢜⢜⢔⠡⡂⡅⢕⢌⡯⣷⣳⡱⡸⡐⢌⢬⢪⡪⣪⣸⣮⢎⢪⢸⢜⣯
-⢮⣲⡪⠄⠂⠕⢜⢕⠁⠀⡈⢐⢘⢜⢆⠂⠀⢂⢑⢝⡺⡌⢀⠂⠀⢕⠱⡽⣽⣞⣯⣧⡣⡻⣞⡷⡵⣱⢱⢡⢑⠝⢝⢛⢎⢇⢆⢣⢹⣺
-⢃⠇⡫⠂⠀⠡⡑⢕⠅⠀⠀⠐⠌⠜⠜⠄⠁⡐⢐⢕⢝⢆⠀⢀⠀⢊⢪⢪⠣⡓⡳⢱⠫⡪⡫⣿⢽⢮⡳⣱⢥⣣⣧⡷⣳⠷⡟⢎⠢⣳
-  ⠀⠐⡀⠂⠈⠠⠈⠂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠝⠢⠀⠀⠀⡐⢕⢕⠄⠠⠐⠀⠂⡂⠌⠸⣻⣽⡪⡪⡫⡫⣱⡱⣕⢕⢕⢕⢕⣽
-   ⠀⢁⠀⠐⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢀⠣⡱⡡⠐⠈⠠⢁⠄⢌⢐⣽⣾⣽⢮⡎⡞⢜⠜⢌⡊⡢⡱⣽⡯
-   ⡂⠄⠂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠨⠨⡊⡢⠁⠅⠢⣈⣢⡿⣾⣷⡿⣿⣻⣮⣪⣪⣷⣽⣗⣿⢿⡇
-   ⠀⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⢁⠪⡸⠨⢸⣺⡿⣯⣿⣿⢿⣿⣯⡯⡿⠽⠷⠿⢯⢿⡻⡻⠐
-   ⢁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠐⡀⢢⢱⢱⠑⣻⣟⣿⣻⣾⣿⡟⠕⠡⠨⠨⡈⡪⢰⢐⢌⢮⢕
-⠀    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠊⠀⠂⡸⡨⡢⠱⣿⣽⣿⡻⢑⠨⠈⠨⢐⠡⣊⢮⣺⣪⣯⣿⣽
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠅⡎⣎⢎⠌⢾⡷⡓⠈⠄⢐⠈⡌⡆⣧⣳⣿⣾⣯⣗⢭⣻
-   ⠈⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⡐⢜⢜⢵⡣⠕⠁⠄⢈⠐⢄⢕⢜⣾⣾⣿⣿⣿⢿⣿⣢⢽
-   ⢔⣐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠠⠨⡪⡓⡇⢃⠁⠐⡈⢄⢪⢢⣳⡿⣯⣿⣿⣷⣿⣿⣿⣿⣯
-   ⠨⢂⢅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠠⢨⢨⢢⠊⡂⢈⢀⠢⡢⣳⣽⣯⣿⣿⣿⣟⣿⡿⣿⣿⣿⣿
-  ⠈⡐⠠⡱⡰⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠀⠀⡀⠁⠁⠂⡁⡐⠠⠂⢄⢕⢵⣻⡷⣿⣿⣿⣿⣟⣿⡿⣟⣷⣿⣿
-  ⠀⡐⢌⢌⢝⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⡀⠀⠐⠈⢄⢂⢔⣱⣹⣼⣾⡿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⣿
-⢪⢎⢗⢵⢳⢹⢪⠀⠁⡀⠂⡀⢂⢐⠐⡐⠀⠂⠀⠈⠀⠀⠀⡀⠁⢀⠨⡨⣊⢦⣣⣗⣷⣿⢷⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿
--->
+<html lang="en">
 <head>
- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Custom website development services - CodeVibes. We offer professional web design and development services for businesses and individuals. Contact us to create a unique website that effectively represents your brand online.">
-  <meta name="keywords" content="custom website development, web design services, custom web development, professional websites">
-  <meta name="author" content="CodeVibes">
-  <title>Website Development - CodeVibes</title>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-  <meta name="trustpilot-one-time-domain-verification-id" content="bb32df66-f762-48a9-b01e-575c45310aa1"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustRoccat</title>
+    <style>
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styl body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            background: linear-gradient(-45deg, #c04fec, #8a26db, #5456e2, #515294);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Styl header */
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            color: #0a0a0a;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #0a0a0a;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container img {
+            vertical-align: middle;
+        }
+
+        /* Styl sekcji bio */
+        section#bio {
+            text-align: center;
+            padding: 20px 0;
+            color: #0f0f0f;
+        }
+
+        /* Styl sekcji Portfolio */
+        #portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .portfolio-item {
+            flex: 0 0 300px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Styl sekcji Spotify Widget */
+        section#spotify-widget {
+            text-align: center;
+            padding: 20px 0;
+            color: #0f0f0f;
+        }
+
+        /* Styl footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border: 2px solid #bb9ad6;
+            border-radius: 10px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #141414;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0f0f0f;
+            color: #181818;
+            font-size: 14px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            background-color: #740297;
+        }
+
+        /* Styl scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #343a40;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #740297;
+            border-radius: 10px;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #740297 #343a40;
+        }
+
+        *::-ms-scrollbar {
+            width: 8px;
+        }
+
+        *::-ms-scrollbar-track {
+            background: #343a40;
+        }
+
+        *::-ms-scrollbar-thumb {
+            background: #740297;
+            border-radius: 10px;
+        }
+
+        iframe {
+            border-radius: 12px;
+        }
+
+        /* Styl sekcji bio */
+section#bio {
+    text-align: center;
+    padding: 30px;
+    color: #0f0f0f;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    margin: 20px;
+}
+
+section#bio h2 {
+    color: #0c0c0c;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+section#bio p {
+    color: #0a0a0a;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+    </style>
 </head>
+
 <body>
-  <div class="background-overlay"></div>
-  <div class="logo-container">
-    <img src="assets/images/logo.png" alt="Logo mojej strony">
-  </div>
-  <div class="description-container typing">
-    <p>We create professional websites to order, tailored to the needs and requirements of the client.</p>
-     <p>Our approach is based on quality, functionality and full customer support at every stage of the project.</p>
-     <p>Please contact us to discuss the details and prepare an individual offer.</p>
-  </div>
-  <div class="skills-container">
-    <div class="skill">
-      <div class="skill-name">HTML</div>
-      <div class="skill-bar">
-        <div class="skill-level" style="width: 90%;">96</div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">CSS</div>
-      <div class="skill-bar">
-        <div class="skill-level" style="width: 80%;">89</div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">PHP</div>
-      <div class="skill-bar">
-        <div class="skill-level" style="width: 70%;">65</div>
-      </div>
-    </div>
-  </div>
-  <div class="hamburger-menu">
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </label>
-    <ul class="menu">
-      
-      <li><a href="https://www.roccatbot.eu/home">Discord Bot</a></li>
-    </ul>
-  </div>
-  <div class="button-container">
-    <a href="https://form.roccatbot.eu" class="main-button">Place an order or ask a question.</a>
-  </div>
-  <footer>
-    <p>Our social media:
-      <a href="https://github.com/JustRoccat" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://instagram.com/justroccat" target="_blank"><i class="fab fa-instagram"></i></a>
-    </p>
-    <div class="coffee-section">
-      <a href="https://ko-fi.com/jtcat" target="_blank" class="kofi-link">
-        <div class="kofi-icon">
-          <img src="https://ko-fi.com/img/cup-border.png" alt="Ko-fi" />
+    <header>
+        <h1>Justroccat</h1>
+        <div class="container">
+            <img src="ae.jpg" alt="Opis obrazu">
         </div>
-        Buy me a coffee!
-      </a>
-    </div>
-    <div class="desginby">
-      <p>© 2023 Made with ❤️ by CodeVibes.</p>
-    </div>
-  </footer>
+    </header>
+
+    <section id="bio">
+        <h2>About me</h2>
+        <p>JustRoccat is an emerging artist who stepped into the music scene with his debut track on 12/06/23. Despite being relatively unknown at the moment, JustRoccat has been quietly honing his craft and developing a unique musical identity. His early work reflects a passion for experimentation, blending various musical styles and incorporating Phonk production methods, often weaving in atmospheric textures. As he continues to evolve as an artist, JustRoccat is poised to make his mark in the industry, offering listeners a fresh and distinctive perspective on music.</p>
+    </section>
+
+    <!-- Nowa sekcja Portfolio -->
+    <section id="portfolio">
+        <div class="portfolio-item">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6D6yYMNwfjO5XdGv94gMig?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-item">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7uB2PZGiYlrXNX69ukpKeW?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-item">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1jBeCp4FlimfXQNlpWM2Zw?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="spotify-widget">
+        <h2>Listen to my Music on Spotify</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/35p0DZY9H6qL0pYeCA6gs1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 justroccat. All rights reserved.</p>
+    </footer>
 </body>
 </html>
